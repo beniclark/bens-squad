@@ -295,3 +295,96 @@ Triggers are natural language — match intent, not exact phrases.
 - ⚠️ **DO NOT** double-encode HTML (raw `<b>`, not `&lt;b&gt;`)
 - Adaptive Cards support `Action.OpenUrl` only (no submit buttons)
 - HTML supports: `<b>`, `<i>`, `<a>`, `<ul>/<li>`, `<pre>`, `<blockquote>`, `<br>`
+
+---
+
+## Demo Content & Preparation
+
+> The squad should be prepared to answer questions about these topics and the outcomes of these prompts during the live demo.
+
+### Demo Subject
+**Copilot CLI** — capabilities, agentic development patterns, and the Squad framework.
+
+### Demo Project
+**Location:** `C:\Users\beclark\keystone-ltd` (a financial services website — Keystone Ltd)
+
+### Demo Prompts (in approximate order)
+
+These are the exact prompts Ben will run live. The squad should understand what each does and be ready to discuss outcomes:
+
+1. **Skill Installation**
+   ```
+   install the suggest-awesome-github-copilot-skills skill as an agent skill in this project folder exactly as it is in your directory
+   ```
+
+2. **Feature Planning**
+   ```
+   i want to add a dark mode feature as well as a backend sql lite server to cache user data. suggest any other changes you feel the website needs.
+   ```
+
+3. **Issue Creation**
+   ```
+   turn this plan into individual github issues and label them by most to least important. send the issues to github. do not implement anything.
+   ```
+
+4. **Delegated Implementation**
+   ```
+   /delegate implement all the open issues in GitHub
+   ```
+
+5. **Fleet UI Redesign**
+   ```
+   /fleet i want the website to have a crimson and creme color theme instead of the current royal blue. i also want it to look a bit sleeker. create a new branch before you implement this
+   ```
+
+6. **Team Composition (Squad)**
+   ```
+   what type of team members do you think i need for this project?
+   ```
+
+7. **Open-Ended Suggestions**
+   ```
+   what do you think this website needs outside of the issues already covered
+   ```
+
+8. **Complex Feature — Stock Options** (this is the big one — involves image attachment, multi-agent fan-out, and potentially hiring new squad members)
+   ```
+   i want to implement a stock options feature on the user account where the user can view options they currently hold, their position, the kind of position it is (iron condor, cash secured put, etc), information on the underlying asset, to help our customers diversify their portfolio. there should be an options chain associated with the underlyings. for now just have options for the major tech stocks in the s&p 500. the attached image is an example of an options chain on fidelity, of course style it to make it match my site. as far as where to get the stock/options data from, i am not sure so i'll let you figure that out or give suggestions on what i need. make sure the implementation of this is sleek. the options chain in its totality should be separate from the and at a glance option positions users can view. [📷 option_chain_peek.png] have the team fan out, plan this and work through the implementation. if you need to hire some new people go ahead.
+   ```
+
+### Slash Commands & Features Being Demoed
+
+| Command / Feature | What it does |
+|-------------------|-------------|
+| `Shift+Tab` | Toggle plan mode / autopilot |
+| `/model` | Switch AI model |
+| `/init` | Initialize a new project |
+| `/resume` | Resume a previous session |
+| `/usage` | Show token/cost usage |
+| `/sessions` | List past sessions |
+| `/update` | Update Copilot CLI |
+| `/delegate` | Delegate work to background agents |
+| `/chronicle` | Generate changelog/history |
+| `/remote` | Work with remote repos |
+| `/research` | Deep research mode |
+| `/share` | Share session context |
+| `/yolo` | Auto-approve all tool calls |
+| `/fleet` | Multi-agent parallel execution |
+| Squads | AI team orchestration (this framework) |
+| Rubber duck | Design critique agent |
+| Agency | Agentic development patterns |
+| `Ctrl+O` | Show details/tool calls |
+
+### Question Routing for Demo Q&A
+
+When audience members ask questions during the demo:
+- **"What is Copilot CLI?"** — Kaylee or Mal: It's GitHub's terminal-based AI assistant for software engineering
+- **"How does /delegate work?"** — Kaylee: Spawns background agents to work on tasks autonomously
+- **"What's /fleet?"** — Kaylee: Parallel multi-agent execution for tasks that can be parallelized
+- **"What are Squads?"** — Mal: AI team framework — persistent agents with roles, memory, and coordination
+- **"How does the rubber duck work?"** — Mal or Jayne: Independent critique agent that reviews plans before implementation
+- **"What's the stock options feature about?"** — Mal: Complex multi-agent demo showing team fan-out, planning, and implementation
+- **"Is this writing real code?"** — Any agent: Yes — Copilot CLI generates real, runnable code in your actual project files
+- **General agentic dev questions** → Mal (Lead perspective) or Kaylee (technical details)
+- **UI/frontend questions** → Wash
+- **Testing/quality questions** → Jayne

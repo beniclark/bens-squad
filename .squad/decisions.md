@@ -57,6 +57,11 @@
 **What:** Link reminder cards must NOT be posted during the intro sequence (Steps 1-4). They are part of the monitoring loop ONLY, posted every 10-15 minutes starting at least 10 minutes after the intro sequence completes. Kaylee's intro sequence is: cheatsheet card → text intro → GIF. No link reminder.
 **Why:** Previous test run incorrectly included the link reminder as part of Kaylee's intro, cluttering the opening sequence.
 
+### 2026-04-16: Demo Scope — Copilot CLI & Squads for FSI
+**By:** Ben
+**What:** The demo covers Copilot CLI capabilities (slash commands, agentic patterns, /delegate, /fleet, plan mode) and the Squad framework (team orchestration, persistent memory, multi-agent fan-out). Demo project is Keystone Ltd (financial services website) at C:\Users\beclark\keystone-ltd. Prompts and Q&A routing are documented in demo-config.md under "Demo Content & Preparation". The squad should be ready to answer questions about outcomes of each demo prompt and about agentic development as a concept.
+**Why:** Pre-loading context so agents can intelligently answer audience questions during the live demo.
+
 ## Governance
 
 - All meaningful changes require team consensus
