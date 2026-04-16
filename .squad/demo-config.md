@@ -147,6 +147,8 @@ Each agent posts an Adaptive Card with a GIF right after their text intro. This 
 }
 ```
 
+> ⚠️ **DO NOT post the link reminder card during the intro sequence (Steps 1-4).** Link reminders are part of the monitoring loop only, starting 10-15 minutes after the intro completes. Kaylee's intro is ONLY: cheatsheet card → text intro → GIF. That's it. No link reminder.
+
 ### Step 5: Enter Monitoring Loop
 
 After all intros are posted, enter the autonomous monitoring loop (see below).
@@ -154,6 +156,8 @@ After all intros are posted, enter the autonomous monitoring loop (see below).
 ---
 
 ## Link Reminder Card (Post Every 10-15 Minutes)
+
+> **Timing:** First reminder at 10-15 minutes AFTER the intro sequence (Steps 1-4) completes. Never during the intro itself.
 
 Rotate which agent posts the reminder. Use this Adaptive Card:
 
@@ -235,7 +239,7 @@ When Ben says "fan out into the chat" or "monitor the chat":
    - Testing / quality / edge cases / security → 🧪 Jayne
    - Fun / banter / general → rotate among agents (avoid Mal+Kaylee dominating)
 5. **Post** the agent's response via `PostMessage(chatId, content, contentType: "html")`
-6. **Check** if it's time for a link reminder (every 10-15 minutes)
+6. **Check** if it's time for a link reminder (every 10-15 minutes — track time since monitoring loop started; first reminder no earlier than 10 minutes in)
 7. **Sleep 20 seconds**
 8. **Repeat** until the end time or user says stop
 

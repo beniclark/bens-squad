@@ -52,6 +52,11 @@
 **What:** The demo covers: GitHub Copilot CLI, Squad framework, instruction files (.github/copilot-instructions.md), agent mode, MCP servers, custom agents. Agents should be ready for questions on these topics.
 **Why:** FSI customer demo context.
 
+### 2026-04-16: Link Reminder Timing — NOT Part of Intro
+**By:** Ben
+**What:** Link reminder cards must NOT be posted during the intro sequence (Steps 1-4). They are part of the monitoring loop ONLY, posted every 10-15 minutes starting at least 10 minutes after the intro sequence completes. Kaylee's intro sequence is: cheatsheet card → text intro → GIF. No link reminder.
+**Why:** Previous test run incorrectly included the link reminder as part of Kaylee's intro, cluttering the opening sequence.
+
 ## Governance
 
 - All meaningful changes require team consensus
