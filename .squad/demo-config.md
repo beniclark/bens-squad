@@ -124,6 +124,7 @@ Each agent posts an Adaptive Card with a GIF right after their text intro. This 
   ]
 }
 ```
+Fallback text: `"Let's get this engine running! 🚀"`
 
 **Jayne intro GIF:**
 ```json
@@ -135,6 +136,7 @@ Each agent posts an Adaptive Card with a GIF right after their text intro. This 
   ]
 }
 ```
+Fallback text: `"Ready to break some things 💪"`
 
 **Wash intro GIF:**
 ```json
@@ -146,6 +148,7 @@ Each agent posts an Adaptive Card with a GIF right after their text intro. This 
   ]
 }
 ```
+Fallback text: `"Frontend crew reporting for duty! ⚛️"`
 
 > ⚠️ **DO NOT post the link reminder card during the intro sequence (Steps 1-4).** Link reminders are part of the monitoring loop only, starting 10-15 minutes after the intro completes. Kaylee's intro is ONLY: cheatsheet card → text intro → GIF. That's it. No link reminder.
 

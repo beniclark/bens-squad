@@ -32,6 +32,11 @@
 **What:** After the welcome card and cheatsheet, each agent (Kaylee, Wash, Jayne — NOT Mal, who posted the welcome) introduces themselves with a brief HTML message, then follows up with a GIF Adaptive Card.
 **Why:** Creates a lively "squad entering the room" feel.
 
+### 2026-04-16: GIF Card Fallback Text — No Agent Labels
+**By:** Ben
+**What:** When posting GIF Adaptive Cards, the `content` fallback text must NOT say "{AgentName} intro GIF" or any system label. Use the card's caption text as fallback instead (e.g., "Let's get this engine running! 🚀"). GIFs should feel organic, not labeled.
+**Why:** Ben said labeling GIF posts feels unnatural. GIFs are personality, not system artifacts.
+
 ### 2026-04-16: HTML Formatting — Raw Tags Only
 **By:** Coordinator (learned from bugs)
 **What:** ALWAYS use raw HTML tags (`<b>`, `<br>`, `<a href>`) in Teams messages. NEVER use HTML entities (`&lt;b&gt;`). Previous sessions had double-encoding bugs that showed literal tag text instead of formatting.
