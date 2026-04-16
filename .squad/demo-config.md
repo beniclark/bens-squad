@@ -62,6 +62,20 @@ Each agent posts a short intro after the welcome card.
 🧪 **Jayne** — I break things so you don't have to. Tests, edge cases, quality gates. Try to stump me. 💪
 ```
 
+## Cheatsheet Card
+
+Post the Copilot CLI cheatsheet image (by @pvergadia / thecloudgirl.dev):
+
+```json
+{
+  "body": [
+    {"type": "TextBlock", "text": "📋 **GitHub Copilot CLI Cheatsheet**", "weight": "Bolder", "size": "Medium"},
+    {"type": "TextBlock", "text": "All the commands, shortcuts, and options in one visual — by @pvergadia", "wrap": true},
+    {"type": "Image", "url": "https://raw.githubusercontent.com/beniclark/bens-squad/main/assets/copilot-cli-cheatsheet.png", "size": "Stretch"}
+  ]
+}
+```
+
 ## Fun GIF URLs (Verified Working in Adaptive Cards)
 
 | Occasion | URL |
