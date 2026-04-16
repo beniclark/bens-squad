@@ -122,6 +122,20 @@ Triggers are natural language — the coordinator matches intent, not exact phra
 | Wrap up | "Wrap it up", "Say goodbye", "Crew, sign off" | Closing messages from the crew |
 | Stop monitoring | "Stop monitoring", "Monitoring off" (in Teams chat or CLI) | Exits the polling loop |
 
+## Cheatsheet Image
+
+Post as an Adaptive Card after the welcome card:
+
+```json
+{
+  "body": [
+    {"type": "TextBlock", "text": "📋 GitHub Copilot CLI Cheatsheet", "weight": "Bolder", "size": "Medium"},
+    {"type": "TextBlock", "text": "By @pvergadia / thecloudgirl.dev", "isSubtle": true, "size": "Small"},
+    {"type": "Image", "url": "https://raw.githubusercontent.com/beniclark/bens-squad/main/assets/copilot-cli-cheatsheet.png", "size": "Stretch"}
+  ]
+}
+```
+
 ## Important Notes
 
 - ⚠️ All messages appear as **Ben's account** — agents sign with emoji + name
