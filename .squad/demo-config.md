@@ -4,17 +4,25 @@
 > answering questions, sharing links, posting GIFs, and keeping things lively.
 > This file is the AUTHORITATIVE playbook — any new session should read this first.
 
-## Chat IDs
+## Chat ID — Dynamic
 
+**There is no hardcoded chat ID.** Ben provides a Teams chat link at trigger time. Extract the `chatId` from the URL.
+
+### How to extract the chatId from a Teams link
+
+Teams chat links look like:
 ```
-# PRODUCTION demo chat (use on demo day):
-production_chatId: 19:meeting_YmJiOWIyNTgtODIyOC00OTg2LWI2MzEtNjdmMGIwMTE3OWM4@thread.v2
-
-# TEST chat (for dry runs — safe to spam):
-test_chatId: 19:meeting_NTlmMDFmODgtZjE3ZC00ZTNiLTgyY2MtZmJjZTI2ZGU0OWYx@thread.v2
+https://teams.microsoft.com/l/chat/19:meeting_XXXX@thread.v2/conversations?context=...
 ```
 
-The user will provide a chat link when triggering the demo. Extract the chatId from it.
+The chatId is the path segment between `/chat/` and `/conversations`:
+```
+19:meeting_XXXX@thread.v2
+```
+
+It will be URL-encoded in the link — decode `%3A` → `:`, `%40` → `@`, etc.
+
+**If Ben provides a chatId directly** (not a link), use it as-is.
 
 ## Ben's Identity (for message filtering)
 
