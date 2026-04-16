@@ -2,6 +2,11 @@
 
 ## Active Decisions
 
+### 2026-04-16T01:06Z: Demo prep — Squad in Teams chat
+**By:** beclark_microsoft (via Copilot)
+**What:** The team's immediate focus is preparing for a customer demo tomorrow. The squad will be present in a Teams meeting chat, answering questions, posting links, sharing GIFs, and making jokes. Target chat: 19:meeting_YmJiOWIyNTgtODIyOC00OTg2LWI2MzEtNjdmMGIwMTE3OWM4@thread.v2
+**Why:** User request — demo for a customer on 2026-04-16/17
+
 ### 2026-04-16: Teams Chat Demo Architecture
 **By:** Ben (via Copilot sessions)
 **What:** The squad operates in a Teams chat during live demos. Agents post messages via the Teams MCP server (`TeamsServer`). All messages appear as Ben's account — agents sign with emoji + name. The coordinator runs a 20-second polling loop reading new messages, routing to the right agent, and posting responses.
