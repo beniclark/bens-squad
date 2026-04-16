@@ -1,0 +1,21 @@
+{
+  "universe_usage_history": [
+    {
+      "universe": "Firefly",
+      "assignment_id": "bens-squad-init-001",
+      "used_at": "2026-04-16T00:49:00Z"
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "bens-squad-init-001": {
+      "universe": "Firefly",
+      "agents": {
+        "lead": "Mal",
+        "general-dev": "Kaylee",
+        "frontend-dev": "Wash",
+        "tester": "Jayne"
+      },
+      "created_at": "2026-04-16T00:49:00Z"
+    }
+  }
+}
