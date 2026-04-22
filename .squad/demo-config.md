@@ -46,8 +46,8 @@ Post via `PostMessage` with `adaptiveCardJson` parameter. Use `content: "Welcome
 ```json
 {
   "body": [
-    {"type": "TextBlock", "text": "🚀 Welcome to the Copilot CLI Demo!", "weight": "Bolder", "size": "Large"},
-    {"type": "TextBlock", "text": "Your crew is here and ready to roll. Ask us anything — we're monitoring this chat live.", "wrap": true},
+    {"type": "TextBlock", "text": "🗄️ Welcome to the SQL + GitHub Copilot Demo!", "weight": "Bolder", "size": "Large"},
+    {"type": "TextBlock", "text": "Today we're diving into database development with VS Code, the MSSQL extension, and GitHub Copilot — schema design, query generation, and AI-assisted SQL workflows. Your crew is here and ready to roll. Ask us anything — we're monitoring this chat live.", "wrap": true},
     {"type": "TextBlock", "text": "👥 Meet the Squad", "weight": "Bolder", "size": "Medium", "spacing": "Medium"},
     {"type": "FactSet", "facts": [
       {"title": "🏗️ Mal", "value": "Squad Lead — architecture, strategy, big picture"},
@@ -55,26 +55,20 @@ Post via `PostMessage` with `adaptiveCardJson` parameter. Use `content: "Welcome
       {"title": "⚛️ Wash", "value": "Frontend Dev — UI, VS Code, design, developer experience"},
       {"title": "🧪 Jayne", "value": "Tester — security, quality, edge cases, breaking things"}
     ]},
-    {"type": "TextBlock", "text": "📎 Useful Links", "weight": "Bolder", "size": "Medium", "spacing": "Medium"},
-    {"type": "TextBlock", "text": "These will be relevant throughout today's demo:", "wrap": true},
+    {"type": "TextBlock", "text": "📎 Reference Links", "weight": "Bolder", "size": "Medium", "spacing": "Medium"},
+    {"type": "TextBlock", "text": "These are the references for today's SQL + Copilot demo:", "wrap": true},
     {"type": "FactSet", "facts": [
-      {"title": "🚀 Copilot CLI", "value": "Product page — features, pricing, getting started"},
-      {"title": "💻 CLI Repo", "value": "Open-source repo with issues, discussions, and releases"},
-      {"title": "📝 Customize Your Repo", "value": "Guide to instruction files, custom agents, and repo-level config"},
-      {"title": "⭐ Awesome Copilot", "value": "Curated list of Copilot extensions, tools, and resources"},
-      {"title": "📰 Multi-Model Blog", "value": "How CLI combines model families for a second opinion"},
-      {"title": "🤝 Squad Docs", "value": "Official Squad framework documentation and setup guide"},
-      {"title": "🔧 Squad Repo", "value": "Source code for the Squad custom agent framework"}
+      {"title": "💻 Download VS Code", "value": "Grab the latest VS Code build — the editor we're using for today's walkthrough"},
+      {"title": "🧠 Copilot in SSMS", "value": "Overview of GitHub Copilot inside SQL Server Management Studio — AI assistance for T-SQL authoring and database admin"},
+      {"title": "⚡ Copilot Code Generation (MSSQL ext)", "value": "How the MSSQL extension for VS Code uses Copilot to generate T-SQL, schema, and query code with live database context"},
+      {"title": "🗄️ sql-copilot-demo Repo", "value": "Ben's companion repo for this session — sample database, prompts, and end-to-end walkthroughs"}
     ]}
   ],
   "actions": [
-    {"type": "Action.OpenUrl", "title": "🚀 Copilot CLI Product Page", "url": "https://github.com/features/copilot/cli/"},
-    {"type": "Action.OpenUrl", "title": "💻 Copilot CLI Repo", "url": "https://github.com/github/copilot-cli"},
-    {"type": "Action.OpenUrl", "title": "📝 Customize Your Repo Guide", "url": "https://github.com/microsoftnorman/customize-your-repo-with-github-copilot"},
-    {"type": "Action.OpenUrl", "title": "⭐ Awesome Copilot", "url": "https://github.com/github/awesome-copilot"},
-    {"type": "Action.OpenUrl", "title": "📰 Multi-Model Blog Post", "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/"},
-    {"type": "Action.OpenUrl", "title": "🤝 Squad Docs", "url": "https://bradygaster.github.io/squad/"},
-    {"type": "Action.OpenUrl", "title": "🔧 Squad Repo", "url": "https://github.com/bradygaster/squad"}
+    {"type": "Action.OpenUrl", "title": "💻 Download VS Code", "url": "https://code.visualstudio.com/download"},
+    {"type": "Action.OpenUrl", "title": "🧠 Copilot in SSMS", "url": "https://learn.microsoft.com/en-us/ssms/github-copilot/overview"},
+    {"type": "Action.OpenUrl", "title": "⚡ Copilot Code Generation (MSSQL ext)", "url": "https://learn.microsoft.com/en-us/sql/tools/visual-studio-code-extensions/github-copilot/code-generation?view=sql-server-ver17"},
+    {"type": "Action.OpenUrl", "title": "🗄️ sql-copilot-demo Repo", "url": "https://github.com/beniclark/sql-copilot-demo"}
   ]
 }
 ```
@@ -84,9 +78,9 @@ Post via `PostMessage` with `adaptiveCardJson` parameter. Use `content: "Welcome
 ```json
 {
   "body": [
-    {"type": "TextBlock", "text": "📋 GitHub Copilot CLI Cheatsheet", "weight": "Bolder", "size": "Medium"},
-    {"type": "TextBlock", "text": "By @pvergadia / thecloudgirl.dev", "isSubtle": true, "size": "Small"},
-    {"type": "Image", "url": "https://raw.githubusercontent.com/beniclark/bens-squad/main/assets/copilot-cli-cheatsheet.png", "size": "Stretch"}
+    {"type": "TextBlock", "text": "📋 GitHub Copilot Cheatsheet", "weight": "Bolder", "size": "Medium"},
+    {"type": "TextBlock", "text": "Quick reference for GitHub Copilot", "isSubtle": true, "size": "Small"},
+    {"type": "Image", "url": "https://raw.githubusercontent.com/beniclark/bens-squad/main/assets/copilotcheatsheet.webp", "size": "Stretch"}
   ]
 }
 ```
@@ -168,25 +162,19 @@ Rotate which agent posts the reminder. Use this Adaptive Card:
 {
   "body": [
     {"type": "TextBlock", "text": "📌 Demo Links Reminder", "weight": "Bolder", "size": "Medium"},
-    {"type": "TextBlock", "text": "These are relevant to what we're covering today — grab them while you're here!", "wrap": true, "spacing": "Small"},
+    {"type": "TextBlock", "text": "References for today's SQL + GitHub Copilot demo — grab them while you're here!", "wrap": true, "spacing": "Small"},
     {"type": "FactSet", "facts": [
-      {"title": "🚀 Copilot CLI", "value": "Product page — features, pricing, getting started"},
-      {"title": "💻 CLI Repo", "value": "Open-source repo with issues, discussions, and releases"},
-      {"title": "📝 Customize Your Repo", "value": "Guide to instruction files, custom agents, and repo-level config"},
-      {"title": "⭐ Awesome Copilot", "value": "Curated list of Copilot extensions, tools, and resources"},
-      {"title": "📰 Multi-Model Blog", "value": "How CLI combines model families for a second opinion"},
-      {"title": "🤝 Squad Docs", "value": "Official Squad framework documentation and setup guide"},
-      {"title": "🔧 Squad Repo", "value": "Source code for the Squad custom agent framework"}
+      {"title": "💻 Download VS Code", "value": "Grab the latest VS Code build — the editor we're using for today's walkthrough"},
+      {"title": "🧠 Copilot in SSMS", "value": "Overview of GitHub Copilot inside SQL Server Management Studio — AI assistance for T-SQL authoring and database admin"},
+      {"title": "⚡ Copilot Code Generation (MSSQL ext)", "value": "How the MSSQL extension for VS Code uses Copilot to generate T-SQL, schema, and query code with live database context"},
+      {"title": "🗄️ sql-copilot-demo Repo", "value": "Ben's companion repo for this session — sample database, prompts, and end-to-end walkthroughs"}
     ]}
   ],
   "actions": [
-    {"type": "Action.OpenUrl", "title": "🚀 Copilot CLI Product Page", "url": "https://github.com/features/copilot/cli/"},
-    {"type": "Action.OpenUrl", "title": "💻 Copilot CLI Repo", "url": "https://github.com/github/copilot-cli"},
-    {"type": "Action.OpenUrl", "title": "📝 Customize Your Repo Guide", "url": "https://github.com/microsoftnorman/customize-your-repo-with-github-copilot"},
-    {"type": "Action.OpenUrl", "title": "⭐ Awesome Copilot", "url": "https://github.com/github/awesome-copilot"},
-    {"type": "Action.OpenUrl", "title": "📰 Multi-Model Blog Post", "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/"},
-    {"type": "Action.OpenUrl", "title": "🤝 Squad Docs", "url": "https://bradygaster.github.io/squad/"},
-    {"type": "Action.OpenUrl", "title": "🔧 Squad Repo", "url": "https://github.com/bradygaster/squad"}
+    {"type": "Action.OpenUrl", "title": "💻 Download VS Code", "url": "https://code.visualstudio.com/download"},
+    {"type": "Action.OpenUrl", "title": "🧠 Copilot in SSMS", "url": "https://learn.microsoft.com/en-us/ssms/github-copilot/overview"},
+    {"type": "Action.OpenUrl", "title": "⚡ Copilot Code Generation (MSSQL ext)", "url": "https://learn.microsoft.com/en-us/sql/tools/visual-studio-code-extensions/github-copilot/code-generation?view=sql-server-ver17"},
+    {"type": "Action.OpenUrl", "title": "🗄️ sql-copilot-demo Repo", "url": "https://github.com/beniclark/sql-copilot-demo"}
   ]
 }
 ```
@@ -209,7 +197,7 @@ GIFs are a natural part of each agent's persona. Post them:
 | Jayne | `https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif` | Intro / tough guy |
 | Wash | `https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif` | Intro / piloting |
 | General | `https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdkMnJ5OGtiZHN0OXM0Y2Zkcmg2N3VhMWtjamVjbHo3bHRsb3k0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7abKhOpu0NwenH3O/giphy.gif` | Celebration |
-| General | `https://media.giphy.com/media/xT0xeJpnrWC3XWblEk/giphy.gif` | Mind blown |
+| General | `https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif` | Mind blown |
 | General | `https://media.giphy.com/media/111ebonMs90YLu/giphy.gif` | Thumbs up |
 | General | `https://media.giphy.com/media/143vPc6b08locw/giphy.gif` | Ship it |
 
@@ -303,91 +291,66 @@ Triggers are natural language — match intent, not exact phrases.
 
 ## Demo Content & Preparation
 
-> The squad should be prepared to answer questions about these topics and the outcomes of these prompts during the live demo.
+> The squad should be prepared to answer questions about these topics during the live demo.
 
 ### Demo Subject
-**Copilot CLI** — capabilities, agentic development patterns, and the Squad framework.
+**SQL database development in VS Code** using the **MSSQL extension** + **GitHub Copilot** — as a modern SSMS replacement for developers who live in VS Code.
 
 ### Demo Project
-**Location:** `C:\Users\beclark\keystone-ltd` (a financial services website — Keystone Ltd)
+**Location:** `C:\Users\beclark\sql-copilot-demo` (Ben's repo — https://github.com/beniclark/sql-copilot-demo)
 
-### Demo Prompts (in approximate order)
+**What it is:** A one-command `azd up` deployment of **SQL Server 2022 on an Azure VM** seeded with **AdventureWorksLT2022**, plus a full demo kit (connection profiles, queries, sprocs, Copilot prompts, presenter script).
 
-These are the exact prompts Ben will run live. The squad should understand what each does and be ready to discuss outcomes:
+**Key repo layout:**
+- `demo/script.md` — presenter talk track (~20 min)
+- `demo/connection-profiles.md` — VS Code MSSQL connection walkthrough (Entra ID + SQL auth)
+- `demo/copilot-prompts.md` — the exact Copilot prompts Ben will run
+- `demo/queries/` — `01-browse.sql`, `02-joins-aggregates.sql`, `03-top-customers.sql`, `04-export-example.sql`
+- `demo/sprocs/` — `usp_TopCustomersByRevenue`, `usp_ProductsInCategory`, `usp_CustomerOrderHistory`
+- `scripts/load-demo-data.ps1` — attendee path: load sprocs against any SQL Server
+- `infra/` — Bicep for VM + SQL IaaS agent + networking
 
-1. **Skill Installation**
-   ```
-   install the suggest-awesome-github-copilot-skills skill as an agent skill in this project folder exactly as it is in your directory
-   ```
+### Demo Flow (approximate, ~20 min)
 
-2. **Feature Planning**
-   ```
-   i want to add a dark mode feature as well as a backend sql lite server to cache user data. suggest any other changes you feel the website needs.
-   ```
+1. **Install VS Code + MSSQL extension** (`ms-mssql.mssql`, publisher Microsoft, 5M+ downloads) + **GitHub Copilot** + **Copilot Chat**.
+2. **Connect to Azure SQL VM** — show **Entra ID (MFA, passwordless)** as primary, **SQL auth** as fallback. Same TDS protocol SSMS uses.
+3. **Browse like SSMS** — Object Explorer: Databases → AdventureWorksLT2022 → Tables → `SalesLT.Customer` → **Select Top 1000**. Views + Stored Procedures all visible.
+4. **Run queries & export** — run `01-browse.sql`, show results grid (sort, filter, copy-with-headers), run `04-export-example.sql`, **Save as CSV**.
+5. **GitHub Copilot — the big reveal** (~7 min):
+   - **NL → SQL** via Copilot Chat with `#mssql` context (grounds on the live connection schema):
+     - *"Top 10 customers by lifetime order total — full name, company, total orders, total spend."*
+     - *"Monthly revenue for 2008 broken down by product category."*
+     - *"Products that have never been ordered."*
+   - **Inline completion** — type `-- Top 5 products by quantity sold, including product name and category` → Tab to accept.
+   - **Explain existing SQL** — select a query → `@workspace /explain`.
+   - **Fix-it** — paste broken query (missing `GROUP BY`, `LEFT JOIN` downgraded to `INNER JOIN` by WHERE on right-side table) → Copilot diagnoses + fixes.
+   - **Generate DDL + test data** — `CREATE TABLE SalesLT.ProductReview` + 10 INSERTs.
 
-3. **Issue Creation**
-   ```
-   turn this plan into individual github issues and label them by most to least important. send the issues to github. do not implement anything.
-   ```
+### Key talking points the squad should have ready
 
-4. **Delegated Implementation**
-   ```
-   /delegate implement all the open issues in GitHub
-   ```
-
-5. **Fleet UI Redesign**
-   ```
-   /fleet i want the website to have a crimson and creme color theme instead of the current royal blue. i also want it to look a bit sleeker. create a new branch before you implement this
-   ```
-
-6. **Team Composition (Squad)**
-   ```
-   what type of team members do you think i need for this project?
-   ```
-
-7. **Open-Ended Suggestions**
-   ```
-   what do you think this website needs outside of the issues already covered
-   ```
-
-8. **Complex Feature — Stock Options** (this is the big one — involves image attachment, multi-agent fan-out, and potentially hiring new squad members)
-   ```
-   i want to implement a stock options feature on the user account where the user can view options they currently hold, their position, the kind of position it is (iron condor, cash secured put, etc), information on the underlying asset, to help our customers diversify their portfolio. there should be an options chain associated with the underlyings. for now just have options for the major tech stocks in the s&p 500. the attached image is an example of an options chain on fidelity, of course style it to make it match my site. as far as where to get the stock/options data from, i am not sure so i'll let you figure that out or give suggestions on what i need. make sure the implementation of this is sleek. the options chain in its totality should be separate from the and at a glance option positions users can view. [📷 option_chain_peek.png] have the team fan out, plan this and work through the implementation. if you need to hire some new people go ahead.
-   ```
-
-### Slash Commands & Features Being Demoed
-
-| Command / Feature | What it does |
-|-------------------|-------------|
-| `Shift+Tab` | Toggle plan mode / autopilot |
-| `/model` | Switch AI model |
-| `/init` | Initialize a new project |
-| `/resume` | Resume a previous session |
-| `/usage` | Show token/cost usage |
-| `/sessions` | List past sessions |
-| `/update` | Update Copilot CLI |
-| `/delegate` | Delegate work to background agents |
-| `/chronicle` | Generate changelog/history |
-| `/remote` | Work with remote repos |
-| `/research` | Deep research mode |
-| `/share` | Share session context |
-| `/yolo` | Auto-approve all tool calls |
-| `/fleet` | Multi-agent parallel execution |
-| Squads | AI team orchestration (this framework) |
-| Rubber duck | Design critique agent |
-| Agency | Agentic development patterns |
-| `Ctrl+O` | Show details/tool calls |
+- **`#mssql` chat participant** is what makes Copilot grounded in the connected schema — no manual schema paste.
+- **Trust boundary:** MSSQL extension uses the same TDS protocol as SSMS — not a wrapper or transpiler. Works against SQL Server, Azure SQL DB, Managed Instance, Synapse.
+- **Three auth modes**: Entra ID (MFA), SQL Login, Windows/Integrated. `trustServerCertificate: true` is fine for this demo's self-signed cert, NOT prod.
+- **Copilot fix-it pattern**: Copilot frequently catches the "`LEFT JOIN` + `WHERE` on right-side table silently becomes `INNER JOIN`" bug — a classic T-SQL gotcha. Move the filter into the `ON`.
+- **Cross-platform:** Windows, macOS, Linux — same experience.
+- **Query plans:** right-click editor tab → *Explain Query Plan* shows visual plan.
+- **T-SQL debug / stepping:** available via **SQL Database Projects** extension (`ms-mssql.sql-database-projects-vscode`).
+- **Source control for sprocs:** SQL Database Projects + git — real diffs on `.sql` files.
+- **Copilot & private data:** Copilot Chat for Business does not retain prompts. Copilot Enterprise supports self-hosted models for fully offline scenarios.
 
 ### Question Routing for Demo Q&A
 
-When audience members ask questions during the demo:
-- **"What is Copilot CLI?"** — Kaylee or Mal: It's GitHub's terminal-based AI assistant for software engineering
-- **"How does /delegate work?"** — Kaylee: Spawns background agents to work on tasks autonomously
-- **"What's /fleet?"** — Kaylee: Parallel multi-agent execution for tasks that can be parallelized
-- **"What are Squads?"** — Mal: AI team framework — persistent agents with roles, memory, and coordination
-- **"How does the rubber duck work?"** — Mal or Jayne: Independent critique agent that reviews plans before implementation
-- **"What's the stock options feature about?"** — Mal: Complex multi-agent demo showing team fan-out, planning, and implementation
-- **"Is this writing real code?"** — Any agent: Yes — Copilot CLI generates real, runnable code in your actual project files
-- **General agentic dev questions** → Mal (Lead perspective) or Kaylee (technical details)
-- **UI/frontend questions** → Wash
-- **Testing/quality questions** → Jayne
+- **"What is the MSSQL extension?"** → Kaylee: Microsoft's official SQL Server client for VS Code (`ms-mssql.mssql`). Connection mgr, Object Explorer, query editor, results grid, CSV/JSON/Excel export.
+- **"How does Copilot know my schema?"** → Kaylee: The `#mssql` chat participant feeds the active connection's schema into Copilot context. No manual paste.
+- **"Can I debug T-SQL / step through a sproc?"** → Kaylee: Yes, via the **SQL Database Projects** extension.
+- **"Does Copilot work on Azure SQL DB / Managed Instance / Synapse?"** → Kaylee: Yes — anything TDS-compatible.
+- **"How do I authenticate — Entra ID vs SQL Login?"** → Kaylee: Entra ID is passwordless + MFA through your browser, no password stored; SQL Login is the fallback for air-gapped or legacy.
+- **"What about query plans?"** → Jayne: Right-click the editor tab → *Explain Query Plan*.
+- **"Can Copilot fix broken SQL?"** → Jayne: Yes — paste it into chat with `#mssql Fix this query:`. It catches missing GROUP BYs, bad joins, and more.
+- **"Source control for stored procs?"** → Mal: SQL Database Projects + git — `.sql` files diff cleanly.
+- **"Will my SSMS snippets / keybinds work?"** → Kaylee: Copy snippets into VS Code User Snippets; same T-SQL syntax. Ctrl+Shift+E runs queries.
+- **"Is my data sent to Copilot?"** → Mal: Copilot Chat for Business doesn't retain prompts. For fully offline, Copilot Enterprise supports private models.
+- **"How do I remediate a slow/broken query with Copilot?"** → Jayne: Select the query → Copilot Chat → `#mssql Explain this query's performance and suggest an index or rewrite`. Combine with *Explain Query Plan*.
+- **General SQL / T-SQL / schema questions** → Kaylee (technical), Mal (architectural)
+- **Testing / query correctness / query plans** → Jayne
+- **UI / results grid / VS Code ergonomics** → Wash
